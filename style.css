@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    background: #2f2f2f;
+  }
+  
+  #studentForm input[name="name"] {
+    grid-area: name;
+  }
+  
+  #studentForm input[name="age"] {
+    grid-area: age;
+  }
+  
+  #studentForm input[name="roll"] {
+    grid-area: roll;
+  }
+  
+  #studentForm button {
+    grid-area: button;
+  }
+  
+  #studentForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name name"
+      "age roll"
+      "button button";
+  }
+  
+  #studentForm * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  #studentForm button {
+    outline: none;
+    background-color: #00ff11;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  
+  #studentForm input {
+    border: 3px solid #04ff00;
+    outline: none;
+  }
+  
+  #studentForm input:focus {
+    border: 3px solid #00fd04;
+  }
+  
+  #studentForm button:active {
+    border-color: #00ff08;
+  }
+  
+  .students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border: 2px solid rgb(17, 255, 0);
+    background-color:#2f2f2f;
+    color: #2f2f2f;
+    border-radius: 15px;
+  }
+  
+  .students div {
+    width: 25% !important;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .students div * {
+    margin: 5px;
+  }
